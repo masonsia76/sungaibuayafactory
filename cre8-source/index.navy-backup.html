@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CRE8 Detached Factories | Sungai Buaya, Serendah</title>
+<meta name="description" content="Has your business outgrown its factory? Take the 60-second check, then see CRE8: 21 detached factories in Sungai Buaya, Serendah. 12 m ceiling, 3-tonne floor loading, up to 1.25 acres.">
+<meta property="og:title" content="Your business grew. Your factory didn't.">
+<meta property="og:description" content="CRE8: 21 detached factories in Sungai Buaya, Serendah. Take the 60-second check and book a viewing.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E1B33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: the page is a walk from a dark, cramped problem (navy) out into open ground (ivory),
+   then back to navy for the decision. Spec data is set like an engineering drawing. */
+:root {
+  color-scheme: light;
+  --navy: #0E1B33;
+  --navy-2: #16284A;
+  --navy-3: #21365E;
+  --ivory: #F5F1EA;
+  --paper: #FFFDF9;
+  --bronze: #8A6238;        /* text-safe on ivory */
+  --bronze-lit: #D9B98C;    /* text-safe on navy */
+  --bronze-fill: #A67C4E;   /* fills and rules */
+  --sand: #E4D0AD;
+  --alert: #E2734F;
+
+  --font-display: "Archivo", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  --font-data: "IBM Plex Mono", "PingFang SC", "Microsoft YaHei", ui-monospace, Menlo, monospace;
+
+  --gutter: clamp(18px, 5vw, 56px);
+  --max: 1160px;
+  --section: clamp(64px, 10vw, 128px);
+}
+
+/* Section themes: every component reads these five tokens */
+.dark  { --bg: var(--navy);  --fg: #F3EEE4; --muted: #A9B4C8; --accent: var(--bronze-lit); --line: rgba(217,185,140,.26); --card: var(--navy-2); }
+.light { --bg: var(--ivory); --fg: #14213A; --muted: #5A6477; --accent: var(--bronze);     --line: rgba(138,98,56,.3);   --card: var(--paper); }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--navy); color: #F3EEE4;
+  font: 400 17px/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--bronze-lit); outline-offset: 3px; }
+[hidden] { display: none !important; }
+
+section { background: var(--bg); color: var(--fg); padding-block: var(--section); padding-inline: var(--gutter); }
+.wrap { max-width: var(--max); margin-inline: auto; }
+
+/* Type */
+h1, h2, h3 { font-family: var(--font-display); font-stretch: 112%; margin: 0; text-wrap: balance; letter-spacing: -0.015em; }
+h1 { font-size: clamp(2.5rem, 7.4vw, 5.4rem); line-height: 1; font-weight: 750; }
+h2 { font-size: clamp(1.9rem, 4.6vw, 3.4rem); line-height: 1.06; font-weight: 720; }
+h3 { font-size: 1.15rem; line-height: 1.25; font-weight: 700; font-stretch: 105%; letter-spacing: 0; }
+h1 em, h2 em { font-style: normal; color: var(--accent); }
+h1 em { display: inline-block; }
+p { margin: 0; }
+.lede { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--muted); max-width: 58ch; }
+.step {
+  font: 500 .78rem/1 var(--font-data); letter-spacing: .16em; text-transform: uppercase; color: var(--accent);
+  display: flex; align-items: center; gap: 12px; margin-bottom: 22px;
+}
+.step::after { content: ""; height: 1px; width: 56px; background: var(--line); }
+.head { display: grid; gap: 18px; margin-bottom: clamp(32px, 5vw, 56px); }
+.fine { font-size: .82rem; color: var(--muted); }
+.num { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 14px 26px; border: 1px solid transparent; border-radius: 2px;
+  font: 700 1rem/1.1 var(--font-display); font-stretch: 105%; text-decoration: none; cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--sand); color: var(--navy); }
+.btn-primary:hover { background: #F0DFC1; }
+.light .btn-primary { background: var(--navy); color: #F3EEE4; }
+.light .btn-primary:hover { background: var(--navy-3); }
+.btn-ghost { border-color: var(--line); color: var(--fg); background: transparent; }
+.btn-ghost:hover { border-color: var(--accent); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+/* Header */
+.top {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  padding: calc(env(safe-area-inset-top, 0px) + 10px) var(--gutter) 10px;
+  background: rgba(14,27,51,.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(217,185,140,.18);
+}
+.top-in { max-width: var(--max); margin-inline: auto; display: flex; align-items: center; gap: 14px; }
+.brand { font: 800 1.35rem/1 var(--font-display); font-stretch: 118%; letter-spacing: .02em; color: #F3EEE4; text-decoration: none; margin-right: auto; }
+.brand b { color: var(--bronze-lit); font-weight: 800; }
+.lang { background: none; border: 1px solid rgba(217,185,140,.35); border-radius: 2px; min-height: 40px; padding: 0 12px; font: 500 .82rem/1 var(--font-data); color: #F3EEE4; cursor: pointer; }
+.lang:hover { border-color: var(--bronze-lit); }
+.top .btn { min-height: 40px; padding: 8px 16px; font-size: .9rem; }
+.progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; background: var(--bronze-lit); transform-origin: 0 50%; transform: scaleX(0); }
+
+/* 1. Hero */
+.hero {
+  position: relative; padding-top: calc(var(--section) + 60px);
+  background:
+    linear-gradient(90deg, var(--navy) 0%, rgba(14,27,51,.96) 34%, rgba(14,27,51,.62) 62%, rgba(14,27,51,.28) 100%),
+    var(--hero-img, linear-gradient(transparent, transparent)) 72% center / cover no-repeat var(--navy);
+}
+.hero .wrap { display: grid; gap: 28px; }
+.hero h1 { max-width: 12ch; }
+.hero .lede { color: #D5DBE6; max-width: 46ch; }
+.hero-note { display: flex; flex-wrap: wrap; gap: 8px 22px; font: 400 .8rem/1.4 var(--font-data); color: #C3CBD9; margin-top: 8px; }
+.hero-note span::before { content: "— "; color: var(--bronze-lit); }
+.impression { position: absolute; right: var(--gutter); bottom: 12px; font-size: .7rem; color: rgba(243,238,228,.7); font-style: italic; }
+@media (max-width: 720px) {
+  .hero { background:
+    linear-gradient(180deg, rgba(14,27,51,.72) 0%, rgba(14,27,51,.9) 46%, var(--navy) 78%),
+    var(--hero-img, linear-gradient(transparent, transparent)) 62% top / auto 62% no-repeat var(--navy); }
+}
+
+/* 2. Checklist */
+.checks { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.check { position: relative; display: block; cursor: pointer; }
+.check input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.check-box {
+  display: grid; grid-template-columns: 28px 1fr; gap: 16px; align-items: start; height: 100%;
+  padding: 20px 20px 20px 18px; border: 1px solid var(--line); background: transparent;
+  transition: background-color .18s ease, border-color .18s ease;
+}
+.check-box::before {
+  content: ""; width: 26px; height: 26px; border: 1.5px solid var(--accent); margin-top: 1px;
+  background: center / 16px no-repeat;
+}
+.check:hover .check-box { border-color: var(--accent); }
+.check input:checked + .check-box { background: var(--navy-2); border-color: var(--bronze-lit); }
+.check input:checked + .check-box::before {
+  background-color: var(--bronze-lit);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8.5l3.5 3.5 7.5-8' fill='none' stroke='%230E1B33' stroke-width='2.2'/%3E%3C/svg%3E");
+}
+.check input:focus-visible + .check-box { outline: 2px solid var(--bronze-lit); outline-offset: 3px; }
+.check strong { display: block; font: 700 1.05rem/1.3 var(--font-display); font-stretch: 105%; margin-bottom: 4px; }
+.check span span { color: var(--muted); font-size: .95rem; }
+.verdict {
+  margin-top: 26px; display: grid; grid-template-columns: auto 1fr; gap: 8px 24px; align-items: center;
+  padding: 22px 24px; background: var(--navy-2); border-left: 3px solid var(--bronze-lit);
+}
+.verdict-n { font: 750 clamp(2.4rem, 6vw, 3.6rem)/1 var(--font-display); font-stretch: 115%; color: var(--bronze-lit); }
+.verdict-n small { font: 400 .9rem var(--font-data); color: var(--muted); margin-left: 4px; }
+.verdict p { min-width: 0; }
+.verdict .cta-row { grid-column: 1 / -1; margin-top: 8px; }
+@media (max-width: 520px) { .verdict { grid-template-columns: 1fr; } }
+
+/* 3. Rent calculator */
+.calc { display: grid; gap: clamp(28px, 5vw, 64px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); align-items: center; }
+.sliders { display: grid; gap: 34px; }
+.field label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 14px; color: var(--muted); }
+.field output { font: 500 1.25rem var(--font-data); color: var(--fg); white-space: nowrap; }
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 32px; background: transparent; cursor: pointer; margin: 0; }
+input[type=range]::-webkit-slider-runnable-track { height: 2px; background: var(--line); }
+input[type=range]::-moz-range-track { height: 2px; background: var(--line); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; margin-top: -12px; background: var(--bronze-lit); border: 0; border-radius: 0; transform: rotate(45deg); }
+input[type=range]::-moz-range-thumb { width: 24px; height: 24px; background: var(--bronze-lit); border: 0; border-radius: 0; transform: rotate(45deg); }
+.ledger { border-top: 1px solid var(--line); }
+.ledger div { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 18px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.ledger dt { color: var(--muted); }
+.ledger dd { margin: 0; font: 500 clamp(1.5rem, 4.4vw, 2.5rem)/1.1 var(--font-data); font-variant-numeric: tabular-nums; }
+.ledger .zero dd { color: var(--alert); }
+.ledger .next dd { color: var(--bronze-lit); }
+dl { margin: 0; }
+.bridge { margin-top: clamp(40px, 6vw, 72px); font: 700 clamp(1.4rem, 3.2vw, 2.2rem)/1.2 var(--font-display); font-stretch: 110%; max-width: 24ch; text-wrap: balance; }
+.bridge em { font-style: normal; color: var(--bronze-lit); }
+
+/* 4. Reveal */
+.reveal-grid { display: grid; gap: clamp(28px, 5vw, 60px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); align-items: end; }
+.wordmark { font: 800 clamp(4.2rem, 17vw, 12rem)/.82 var(--font-display); font-stretch: 122%; letter-spacing: -.02em; color: var(--navy); }
+.wordmark b { color: var(--bronze-fill); font-weight: 800; }
+.tagline { font: 500 .85rem/1.5 var(--font-data); letter-spacing: .22em; text-transform: uppercase; color: var(--bronze); margin-top: 20px; }
+figure { margin: 0; }
+figcaption { font-size: .74rem; color: var(--muted); font-style: italic; margin-top: 8px; }
+.photo { margin-top: clamp(32px, 5vw, 56px); }
+.photo img { width: 100%; aspect-ratio: 16 / 8.3; object-fit: cover; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); margin-top: clamp(28px, 4vw, 44px); border-top: 1px solid var(--line); }
+.stats div { padding: 22px 24px 4px 0; }
+.stats dt { font: 500 .74rem var(--font-data); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+.stats dd { margin: 0; font: 740 clamp(1.9rem, 4.2vw, 2.9rem)/1 var(--font-display); font-stretch: 108%; letter-spacing: -.02em; display: flex; flex-direction: column-reverse; }
+.stats dd small { font: 500 .95rem var(--font-data); letter-spacing: 0; color: var(--bronze); }
+.stats div { display: flex; flex-direction: column-reverse; justify-content: flex-end; }
+
+/* 5. Fit */
+.fit { display: grid; gap: clamp(28px, 5vw, 64px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); align-items: start; }
+.answers { display: grid; }
+.answer { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 22px 0; border-top: 1px solid var(--line); }
+.answer:last-child { border-bottom: 1px solid var(--line); }
+.answer .was { font: 400 .8rem var(--font-data); color: var(--muted); text-decoration: line-through; text-decoration-color: var(--bronze-fill); }
+.answer p { color: var(--muted); }
+.answer h3 { font-size: 1.3rem; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.tick-tag { font: 500 .68rem/1 var(--font-data); letter-spacing: .1em; text-transform: uppercase; background: var(--navy); color: var(--sand); padding: 6px 8px; }
+.answer.hit h3 { color: var(--bronze); }
+.section-dwg { position: sticky; top: 96px; background: var(--paper); border: 1px solid var(--line); padding: clamp(16px, 3vw, 28px); }
+.section-dwg svg { width: 100%; height: auto; display: block; }
+.dwg-title { display: flex; justify-content: space-between; gap: 12px; font: 500 .72rem var(--font-data); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.dwg-stroke { stroke: #14213A; fill: none; }
+.dwg-text { fill: #14213A; font: 500 13px "IBM Plex Mono", monospace; }
+.dwg-muted { fill: #5A6477; font: 400 11px "IBM Plex Mono", monospace; }
+@media (max-width: 860px) { .section-dwg { position: static; } }
+
+/* 6. Location */
+.loc-points { display: grid; gap: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); border-top: 1px solid var(--line); margin-bottom: clamp(28px, 4vw, 48px); }
+.loc-points article { padding: 24px 28px 24px 0; display: grid; gap: 8px; align-content: start; }
+.loc-points .k { font: 740 clamp(2rem, 4.4vw, 2.8rem)/1 var(--font-display); font-stretch: 110%; color: var(--accent); }
+.loc-points p { color: var(--muted); font-size: .97rem; }
+.maps { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.zoom { display: block; width: 100%; padding: 0; margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 0; position: relative; cursor: zoom-in; }
+.zoom:hover { border-color: var(--accent); }
+.zoom img { width: 100%; }
+.zoom::after { content: "+"; position: absolute; right: 10px; bottom: 10px; width: 34px; height: 34px; display: grid; place-items: center; background: var(--navy); color: var(--sand); font: 400 1.3rem/1 var(--font-data); }
+
+/* 7. Types */
+.tabs { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); margin-bottom: 28px; }
+.tab { background: transparent; border: 0; border-right: 1px solid var(--line); padding: 16px 10px; cursor: pointer; text-align: left; display: grid; gap: 4px; min-width: 0; }
+.tab:last-child { border-right: 0; }
+.tab b { font: 750 clamp(1.1rem, 2.6vw, 1.5rem)/1 var(--font-display); font-stretch: 112%; }
+.tab span { font: 400 .74rem/1.3 var(--font-data); color: var(--muted); }
+.tab[aria-selected=true] { background: var(--navy); color: #F3EEE4; }
+.tab[aria-selected=true] span { color: var(--bronze-lit); }
+.type { display: grid; gap: clamp(24px, 4vw, 56px); grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; }
+.type-plans { min-width: 0; }
+.plans-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; padding-bottom: 12px; margin-bottom: 16px; border-bottom: 1px solid var(--line); }
+.plans-head h3 { font-size: 1.3rem; }
+.plans-head span { font: 400 .78rem var(--font-data); color: var(--muted); }
+@media (max-width: 900px) { .type { grid-template-columns: minmax(0, 1fr); } .type-plans { order: -1; } }
+
+/* Lightbox */
+.lb { border: 0; padding: 0; margin: 0; width: 100vw; height: 100vh; height: 100dvh; max-width: none; max-height: none; background: rgba(9,19,38,.96); }
+.lb::backdrop { background: rgba(9,19,38,.96); }
+.lb-scroll { width: 100%; height: 100%; overflow: auto; display: grid; place-items: center; padding: 64px 12px 24px; -webkit-overflow-scrolling: touch; }
+.lb-scroll img { background: #fff; max-width: none; width: min(1400px, 100%); cursor: zoom-in; }
+.lb-scroll img.big { width: max(1400px, 220%); cursor: zoom-out; }
+.lb-close { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 12px); right: 12px; z-index: 2; min-height: 44px; padding: 0 16px; background: var(--sand); color: var(--navy); border: 0; border-radius: 2px; font: 700 .95rem var(--font-display); cursor: pointer; }
+.type-info { display: grid; gap: 22px; min-width: 0; }
+.type-info h3 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-stretch: 110%; letter-spacing: -.01em; }
+.spec { border-top: 1px solid var(--line); }
+.spec div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.spec dt { color: var(--muted); }
+.spec dd { margin: 0; font: 500 1rem var(--font-data); font-variant-numeric: tabular-nums; text-align: right; }
+.price { background: var(--navy); color: #F3EEE4; padding: 22px 24px; display: grid; gap: 6px; }
+.price small { font: 500 .72rem var(--font-data); letter-spacing: .16em; text-transform: uppercase; color: var(--bronze-lit); }
+.price b { font: 750 clamp(1.7rem, 4.6vw, 2.5rem)/1.05 var(--font-display); font-stretch: 110%; }
+.price span { font: 400 .85rem var(--font-data); color: #A9B4C8; }
+.incl { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; color: var(--muted); }
+.incl li { padding-left: 20px; position: relative; }
+.incl li::before { content: ""; position: absolute; left: 0; top: .72em; width: 10px; height: 1px; background: var(--bronze-fill); }
+.plans { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.plans figcaption { font: 500 .72rem var(--font-data); letter-spacing: .14em; text-transform: uppercase; font-style: normal; color: var(--bronze); margin: 0 0 8px; }
+
+/* 8. Lots */
+.lot-groups { display: grid; gap: 26px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); margin-bottom: clamp(28px, 4vw, 44px); }
+.lot-group h3 { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+.lot-group h3 span { font: 400 .8rem var(--font-data); color: var(--muted); }
+.lots { display: flex; flex-wrap: wrap; gap: 8px; }
+.lot { min-width: 58px; padding: 10px 10px 8px; text-align: center; border: 1px solid var(--bronze-lit); font: 500 1rem/1 var(--font-data); color: var(--fg); position: relative; }
+.lot i { display: block; font: 400 .6rem/1 var(--font-data); font-style: normal; color: var(--muted); margin-top: 5px; letter-spacing: .08em; }
+.lot.sold { border-color: rgba(169,180,200,.3); color: rgba(169,180,200,.55); text-decoration: line-through; }
+.lot.sold i { color: var(--alert); text-decoration: none; }
+.count { font: 750 clamp(4rem, 14vw, 9rem)/.85 var(--font-display); font-stretch: 120%; color: var(--bronze-lit); letter-spacing: -.03em; }
+.count-row { display: grid; gap: 20px clamp(24px, 5vw, 60px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); align-items: end; margin-bottom: clamp(36px, 5vw, 60px); }
+
+/* 9. Book */
+.book { display: grid; gap: clamp(32px, 5vw, 72px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); align-items: start; }
+.next-steps { list-style: none; margin: 28px 0 0; padding: 0; counter-reset: s; display: grid; }
+.next-steps li { counter-increment: s; display: grid; grid-template-columns: 44px 1fr; gap: 6px 8px; padding: 18px 0; border-top: 1px solid var(--line); }
+.next-steps li::before { content: "0" counter(s); font: 500 .85rem/1.9 var(--font-data); color: var(--bronze); }
+.next-steps b { font: 700 1.05rem/1.3 var(--font-display); font-stretch: 105%; display: block; }
+.next-steps span { color: var(--muted); font-size: .95rem; }
+.form { background: var(--navy); color: #F3EEE4; padding: clamp(22px, 4vw, 40px); display: grid; gap: 18px; --line: rgba(217,185,140,.3); --muted: #A9B4C8; }
+.form h3 { font-size: 1.5rem; font-stretch: 110%; }
+.form label { display: grid; gap: 8px; font-size: .9rem; color: var(--muted); }
+.form input, .form select {
+  width: 100%; min-height: 52px; padding: 12px 14px; background: var(--navy-2); color: #F3EEE4;
+  border: 1px solid var(--line); border-radius: 2px; font-size: 1rem; color-scheme: dark;
+}
+.form input:focus, .form select:focus { outline: 2px solid var(--bronze-lit); outline-offset: 1px; }
+.form .btn { width: 100%; background: var(--sand); color: var(--navy); }
+.form .btn:hover { background: #F0DFC1; }
+.form .err { color: #F4A58C; font-size: .88rem; }
+.recap { font: 400 .8rem/1.5 var(--font-data); color: var(--bronze-lit); border-left: 2px solid var(--bronze-fill); padding-left: 12px; }
+
+/* 10. FAQ */
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; padding: 20px 40px 20px 0; position: relative; font: 700 1.08rem/1.35 var(--font-display); font-stretch: 105%; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font: 400 1.5rem/1 var(--font-data); color: var(--accent); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 0 22px; color: var(--muted); max-width: 68ch; }
+
+footer { background: #091326; color: #8F9BB2; padding: 40px var(--gutter) 110px; font-size: .78rem; line-height: 1.6; }
+footer .wrap { display: grid; gap: 14px; }
+footer strong { color: #D5DBE6; font-weight: 600; }
+
+/* Sticky mobile CTA */
+.dock {
+  position: fixed; inset: auto 0 0 0; z-index: 40; display: none;
+  padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(14,27,51,.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(217,185,140,.25);
+  transform: translateY(110%); transition: transform .25s ease;
+}
+.dock.on { transform: none; }
+.dock .btn { width: 100%; }
+@media (max-width: 760px) { .dock { display: block; } .top .btn { display: none; } }
+
+/* Scroll-in: visible by default, animated only when JS is running */
+.js .rise { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.js .rise.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .rise { opacity: 1; transform: none; transition: none; }
+  .dock, .btn { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#top" aria-label="CRE8">CRE<b>8</b></a>
+    <button class="lang" id="lang" type="button" aria-label="Switch language">中文</button>
+    <a class="btn btn-primary" href="#book" data-i="nav_cta">Book a viewing</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="top">
+
+<!-- 1 · HOOK -->
+<section class="hero dark">
+  <div class="wrap">
+    <p class="step" data-i="hero_eyebrow">For factory owners in the Klang Valley north corridor</p>
+    <h1 data-i="hero_h1">Your business grew. <em>Your factory didn't.</em></h1>
+    <p class="lede" data-i="hero_lede">Every year in a space that is too small costs you orders, efficiency, and rent you never see again. Take 60 seconds to find out how much.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#check" data-i="hero_cta">Start the 60-second check</a>
+      <a class="btn btn-ghost" href="#reveal" data-i="hero_skip">Skip to the factory</a>
+    </div>
+    <p class="hero-note"><span data-i="hero_n1">6 quick questions</span><span data-i="hero_n2">No sign-up</span><span data-i="hero_n3">Your answers stay on your phone</span></p>
+  </div>
+  <span class="impression" data-i="impression">Artist's impression</span>
+</section>
+
+<!-- 2 · PROBLEM -->
+<section class="dark" id="check">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="step" data-i="s1_step">Step 1 of 6 · The check</p>
+      <h2 data-i="s1_h2">Which of these happen <em>in your factory today?</em></h2>
+      <p class="lede" data-i="s1_lede">Tap every one that applies. Be honest, nobody else sees this.</p>
+    </div>
+    <div class="checks rise" id="checks">
+      <label class="check"><input type="checkbox" id="c-turn" value="turn"><span class="check-box"><span><strong data-i="c1_t">Lorries have no room to turn</strong><span data-i="c1_d">Trailers queue on the road or reverse in blind, and loading holds up production.</span></span></span></label>
+      <label class="check"><input type="checkbox" id="c-height" value="height"><span class="check-box"><span><strong data-i="c2_t">The roof is too low</strong><span data-i="c2_d">Your racking, crane or new machine line stops where the ceiling does.</span></span></span></label>
+      <label class="check"><input type="checkbox" id="c-floor" value="floor"><span class="check-box"><span><strong data-i="c3_t">The floor decides the layout</strong><span data-i="c3_d">Heavy machines sit where the slab can carry them, not where the workflow needs them.</span></span></span></label>
+      <label class="check"><input type="checkbox" id="c-wall" value="wall"><span class="check-box"><span><strong data-i="c4_t">You share a wall</strong><span data-i="c4_d">Your neighbour's noise, fire risk and parked lorries are your problem too.</span></span></span></label>
+      <label class="check"><input type="checkbox" id="c-squeeze" value="squeeze"><span class="check-box"><span><strong data-i="c5_t">Office, store and production fight for space</strong><span data-i="c5_d">Clients walk through the shop floor to reach your meeting room.</span></span></span></label>
+      <label class="check"><input type="checkbox" id="c-rent" value="rent"><span class="check-box"><span><strong data-i="c6_t">You are still renting</strong><span data-i="c6_d">The rent rises at renewal, and none of it becomes yours.</span></span></span></label>
+    </div>
+    <div class="verdict rise" aria-live="polite">
+      <div class="verdict-n"><span id="v-n">0</span><small>/ 6</small></div>
+      <p id="v-text"></p>
+      <div class="cta-row"><a class="btn btn-ghost" href="#cost" data-i="s1_next">Next: what it costs you</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · AGITATE -->
+<section class="dark" id="cost" style="background: var(--navy-2); --card: var(--navy-3)">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="step" data-i="s2_step">Step 2 of 6 · The cost</p>
+      <h2 data-i="s2_h2">How much rent have you <em>already paid?</em></h2>
+      <p class="lede" data-i="s2_lede">Move the sliders to your own numbers. If you already own your factory, use the rent you would pay for the bigger space you need.</p>
+    </div>
+    <div class="calc rise">
+      <div class="sliders">
+        <div class="field">
+          <label for="rent"><span data-i="calc_rent">Monthly rent</span><output id="rent-out" for="rent"></output></label>
+          <input type="range" id="rent" min="10000" max="200000" step="5000" value="40000">
+        </div>
+        <div class="field">
+          <label for="years"><span data-i="calc_years">Years you have rented</span><output id="years-out" for="years"></output></label>
+          <input type="range" id="years" min="1" max="20" step="1" value="8">
+        </div>
+        <p class="fine" data-i="calc_note">Plain multiplication of the figures you enter. Rental increases are not included, so the real number is usually higher.</p>
+      </div>
+      <dl class="ledger" aria-live="polite">
+        <div><dt data-i="led_paid">Paid to your landlord so far</dt><dd id="paid"></dd></div>
+        <div class="zero"><dt data-i="led_owned">What you own from it</dt><dd>RM 0</dd></div>
+        <div class="next"><dt data-i="led_next">Next 10 years at the same rent</dt><dd id="next10"></dd></div>
+      </dl>
+    </div>
+    <p class="bridge rise" data-i="bridge">Now picture that money going into a factory <em>with your name on it.</em></p>
+  </div>
+</section>
+
+<!-- 4 · REVEAL -->
+<section class="light" id="reveal">
+  <div class="wrap">
+    <div class="reveal-grid rise">
+      <div>
+        <p class="step" data-i="s3_step">Step 3 of 6 · The way out</p>
+        <div class="wordmark" role="img" aria-label="CRE8">CRE<b>8</b></div>
+        <p class="tagline" data-i="tagline">Space to produce. Room to grow.</p>
+      </div>
+      <div class="head" style="margin:0">
+        <h2 data-i="s3_h2">21 detached factories in Sungai Buaya, Serendah.</h2>
+        <p class="lede" data-i="s3_lede">Each one stands on its own plot of about an acre, with production, storage and a corporate office under one roof. Built for production. Designed for growth.</p>
+      </div>
+    </div>
+    <figure class="photo rise">
+      <img data-img="hero" alt="CRE8 detached factory with double-storey office frontage and covered loading bay" width="1800" height="933">
+      <figcaption data-i="impression">Artist's impression</figcaption>
+    </figure>
+    <dl class="stats rise">
+      <div><dt data-i="st1">Detached factories</dt><dd>21</dd></div>
+      <div><dt data-i="st2">Land area per factory</dt><dd><small data-i="u_acres">acres</small>0.99–1.25</dd></div>
+      <div><dt data-i="st3">Built-up area</dt><dd><small>sq ft</small>22,833–25,865</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 5 · FIT -->
+<section class="light" id="fit" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="step" data-i="s4_step">Step 4 of 6 · The fit</p>
+      <h2 data-i="s4_h2">Every problem you ticked <em>has an answer here.</em></h2>
+    </div>
+    <div class="fit">
+      <div class="answers rise" id="answers">
+        <article class="answer" data-k="height">
+          <span class="was" data-i="a1_w">The roof is too low</span>
+          <h3><span data-i="a1_t">12-metre ceiling height</span></h3>
+          <p data-i="a1_d">High production space for your operational requirements. Stack higher, lift higher, install the line you actually want.</p>
+        </article>
+        <article class="answer" data-k="floor">
+          <span class="was" data-i="a2_w">The floor decides the layout</span>
+          <h3><span data-i="a2_t">3-tonne floor loading</span></h3>
+          <p data-i="a2_d">A production floor designed for industrial operations, so the workflow decides where machines go.</p>
+        </article>
+        <article class="answer" data-k="turn">
+          <span class="was" data-i="a3_w">Lorries have no room to turn</span>
+          <h3><span data-i="a3_t">Spacious setbacks on your own land</span></h3>
+          <p data-i="a3_d">Room for vehicle turning and loading movements, with front loading access inside your own gate.</p>
+        </article>
+        <article class="answer" data-k="wall">
+          <span class="was" data-i="a4_w">You share a wall</span>
+          <h3><span data-i="a4_t">Fully detached</span></h3>
+          <p data-i="a4_d">No party wall. Your building, your perimeter, your gate, on 0.99 to 1.25 acres.</p>
+        </article>
+        <article class="answer" data-k="squeeze">
+          <span class="was" data-i="a5_w">Office, store and production fight for space</span>
+          <h3><span data-i="a5_t">Two floors of office, separate from production</span></h3>
+          <p data-i="a5_d">Ground- and first-floor offices behind a corporate facade, plus canteen, washrooms and surau.</p>
+        </article>
+        <article class="answer" data-k="rent">
+          <span class="was" data-i="a6_w">You are still renting</span>
+          <h3><span data-i="a6_t">Yours, from RM 9,985,000</span></h3>
+          <p data-i="a6_d">Stop funding someone else's asset. The instalments build equity in your own industrial address.</p>
+        </article>
+      </div>
+      <figure class="section-dwg rise">
+        <div class="dwg-title"><span data-i="dwg_t">Section · clear height</span><span data-i="dwg_s">Drawn to scale</span></div>
+        <svg viewBox="0 0 520 330" role="img" aria-label="Scale drawing: a 12 metre ceiling compared with a 4 metre lorry and a person">
+          <rect x="0" y="0" width="520" height="330" fill="#FFFDF9"/>
+          <rect x="40" y="36" width="380" height="264" class="dwg-stroke" stroke-width="2"/>
+          <line x1="40" y1="212" x2="420" y2="212" class="dwg-stroke" stroke-width=".8" stroke-dasharray="3 5" opacity=".45"/>
+          <line x1="40" y1="124" x2="420" y2="124" class="dwg-stroke" stroke-width=".8" stroke-dasharray="3 5" opacity=".45"/>
+          <text x="48" y="207" class="dwg-muted">4 m</text>
+          <text x="48" y="119" class="dwg-muted">8 m</text>
+          <line x1="10" y1="300" x2="510" y2="300" class="dwg-stroke" stroke-width="2"/>
+          <!-- lorry, 4 m high -->
+          <rect x="96" y="212" width="160" height="72" fill="#E4D0AD" stroke="#14213A" stroke-width="1.5"/>
+          <path d="M260 284 V240 h26 l14 18 v26 z" fill="#FFFDF9" stroke="#14213A" stroke-width="1.5"/>
+          <circle cx="126" cy="291" r="9" fill="#14213A"/><circle cx="150" cy="291" r="9" fill="#14213A"/><circle cx="282" cy="291" r="9" fill="#14213A"/>
+          <text x="176" y="254" text-anchor="middle" class="dwg-text" id="dwg-lorry">lorry ≈ 4 m</text>
+          <!-- person, 1.7 m -->
+          <circle cx="352" cy="267" r="4.5" fill="#14213A"/>
+          <path d="M352 272 v16 m0 0 l-5 12 m5 -12 l5 12 m-11 -22 h12" class="dwg-stroke" stroke-width="2"/>
+          <text x="352" y="252" text-anchor="middle" class="dwg-muted">1.7 m</text>
+          <!-- dimension line -->
+          <line x1="462" y1="36" x2="462" y2="300" stroke="#A67C4E" stroke-width="1.5"/>
+          <line x1="452" y1="36" x2="472" y2="36" stroke="#A67C4E" stroke-width="1.5"/>
+          <line x1="452" y1="300" x2="472" y2="300" stroke="#A67C4E" stroke-width="1.5"/>
+          <text x="478" y="174" fill="#8A6238" style="font:500 20px 'IBM Plex Mono',monospace">12 m</text>
+        </svg>
+        <figcaption data-i="dwg_c">Three lorries high. Lorry and person are typical sizes, shown for scale only.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · LOCATION -->
+<section class="dark" id="location">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="step" data-i="s5_step">Step 5 of 6 · The address</p>
+      <h2 data-i="s5_h2">Connected today. <em>Better connected tomorrow.</em></h2>
+      <p class="lede" data-i="s5_lede">CRE8 sits inside Novva Industrial Park, just off the North–South Expressway. A second highway link and an ECRL station are both planned around it.</p>
+    </div>
+    <div class="loc-points rise">
+      <article><div class="k">2</div><h3 data-i="l1_t">Highway interchanges</h3><p data-i="l1_d">Sungai Buaya Interchange today. A planned connection through Novva Industrial Park towards Bukit Beruntung Interchange, target Q1 2028.</p></article>
+      <article><div class="k">≈ 8 km</div><h3 data-i="l2_t">To ECRL Bandar Serendah</h3><p data-i="l2_d">A future passenger and freight station serving the wider Serendah industrial and logistics corridor.</p></article>
+      <article><div class="k">4</div><h3 data-i="l3_t">Industrial towns around you</h3><p data-i="l3_d">Serendah, Bukit Beruntung, Sungai Choh and Rawang, with their manufacturers, suppliers, workforce and supporting businesses.</p></article>
+    </div>
+    <div class="maps rise">
+      <figure><button type="button" class="zoom"><img data-img="location" width="1500" height="871" alt="Location map showing CRE8 at Novva Industrial Park, Sungai Buaya Interchange, the planned Bukit Beruntung connection and ECRL Bandar Serendah Station"></button><figcaption data-i="map1_c">Schematic illustration, not to scale. Tap to enlarge.</figcaption></figure>
+      <figure><button type="button" class="zoom"><img data-img="access" width="1600" height="945" alt="Master-plan route from CRE8 at Novva Industrial Park along the 132 foot road reserve to Bukit Beruntung toll plaza"></button><figcaption data-i="map2_c">Master-plan based schematic of the future route to Bukit Beruntung. Subject to infrastructure implementation and authority / developer progress.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · CHOOSE -->
+<section class="light" id="types">
+  <div class="wrap">
+    <div class="head rise">
+      <p class="step" data-i="s6_step">Step 6 of 6 · Your factory</p>
+      <h2 data-i="s6_h2">Three layouts. <em>Pick the one that fits your operation.</em></h2>
+    </div>
+    <div class="tabs rise" role="tablist" aria-label="Factory types">
+      <button class="tab" role="tab" id="tab-A" aria-controls="type-panel" aria-selected="true" data-type="A" type="button"><b>Type A</b><span data-i="tA_s">Intermediate · 0.99 acre</span></button>
+      <button class="tab" role="tab" id="tab-B" aria-controls="type-panel" aria-selected="false" data-type="B" type="button"><b>Type B</b><span data-i="tB_s">Intermediate · 1.20–1.24 acres</span></button>
+      <button class="tab" role="tab" id="tab-C" aria-controls="type-panel" aria-selected="false" data-type="C" type="button"><b>Type C</b><span data-i="tC_s">Corner · 1.19–1.25 acres</span></button>
+    </div>
+    <div class="type" id="type-panel" role="tabpanel" aria-labelledby="tab-A">
+      <div class="type-info">
+        <h3 id="t-title"></h3>
+        <dl class="spec">
+          <div><dt data-i="sp_land">Land area</dt><dd id="t-land"></dd></div>
+          <div><dt data-i="sp_bu">Total built-up</dt><dd id="t-bu"></dd></div>
+          <div><dt data-i="sp_lots">Lots released</dt><dd id="t-lots"></dd></div>
+          <div><dt data-i="sp_psf">SPA price per sq ft (built-up)</dt><dd id="t-psf"></dd></div>
+        </dl>
+        <div class="price"><small data-i="sp_price">SPA price</small><b id="t-price"></b><span id="t-price-note"></span></div>
+        <ul class="incl" id="t-incl"></ul>
+        <div class="cta-row"><a class="btn btn-primary" href="#book" id="t-cta"></a></div>
+      </div>
+      <div class="type-plans">
+        <div class="plans-head"><h3 id="plans-title"></h3><span data-i="pl_hint">Tap a plan to enlarge</span></div>
+        <div class="plans">
+          <figure><figcaption data-i="pl_gf">Ground floor</figcaption><button type="button" class="zoom"><img id="p-gf" data-img="planA-gf" width="800" height="1133" alt="Ground floor plan"></button></figure>
+          <figure><figcaption data-i="pl_1f">First floor</figcaption><button type="button" class="zoom"><img id="p-1f" data-img="planA-1f" width="800" height="1128" alt="First floor plan"></button></figure>
+        </div>
+        <p class="fine" style="margin-top:10px" data-i="pl_note">Plans reproduced at reduced scale. Tap to enlarge. Refer to the applicable lot plans for layout details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · SCARCITY -->
+<section class="dark" id="lots">
+  <div class="wrap">
+    <div class="count-row rise">
+      <div class="count" id="left-count">21</div>
+      <div class="head" style="margin:0">
+        <h2 data-i="s7_h2">That is all there is. <em>Once a lot is taken, it is gone.</em></h2>
+        <p class="lede" id="lots-lede"></p>
+      </div>
+    </div>
+    <div class="lot-groups rise" id="lot-groups"></div>
+    <figure class="rise"><button type="button" class="zoom"><img data-img="siteplan" width="1700" height="513" alt="Site plan with the 21 CRE8 lots highlighted"></button><figcaption data-i="site_c">CRE8 lots are shaded. Other plots shown for location context. Diagram is for identification and is not to scale. PE lots are as marked on the plan.</figcaption></figure>
+    <div class="cta-row rise" style="margin-top:32px">
+      <a class="btn btn-primary" href="#book" data-i="s7_cta">Ask which lots are still open</a>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · ACTION -->
+<section class="light" id="book">
+  <div class="wrap book">
+    <div class="rise">
+      <p class="step" data-i="s8_step">The last step</p>
+      <h2 data-i="s8_h2">Stand on the land <em>before you decide anything.</em></h2>
+      <p class="lede" style="margin-top:18px" data-i="s8_lede">A drawing cannot show you how wide the road is or how your lorries will turn in. One site visit will. It costs nothing and commits you to nothing.</p>
+      <ol class="next-steps">
+        <li><div><b data-i="n1_t">Send the request</b><span data-i="n1_d">It opens WhatsApp with your details filled in. We reply to confirm a time.</span></div></li>
+        <li><div><b data-i="n2_t">Walk the site with us</b><span data-i="n2_d">See the lots, the access roads and the route to the highway at Novva Industrial Park, Sungai Buaya.</span></div></li>
+        <li><div><b data-i="n3_t">Get the lot-by-lot price chart</b><span data-i="n3_d">Land size, built-up and SPA price for every lot, with the floor plans for the type you want.</span></div></li>
+      </ol>
+    </div>
+    <form class="form rise" id="form" novalidate>
+      <h3 data-i="f_title">Book my viewing</h3>
+      <label for="f-name"><span data-i="f_name">Your name</span><input id="f-name" name="name" type="text" autocomplete="name" required></label>
+      <label for="f-type"><span data-i="f_type">I am interested in</span>
+        <select id="f-type" name="type">
+          <option value="A">Type A · 0.99 acre</option>
+          <option value="B">Type B · 1.20–1.24 acres</option>
+          <option value="C">Type C · Corner</option>
+          <option value="?" data-i="f_unsure">Not sure yet, advise me</option>
+        </select>
+      </label>
+      <label for="f-when"><span data-i="f_when">Best time to visit</span>
+        <select id="f-when" name="when">
+          <option value="wd" data-i="f_wd">Weekday</option>
+          <option value="we" data-i="f_we">Weekend</option>
+          <option value="any" data-i="f_any">Any day, as soon as possible</option>
+        </select>
+      </label>
+      <p class="recap" id="recap" hidden></p>
+      <p class="err" id="f-err" role="alert" hidden></p>
+      <button class="btn" type="submit">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.300-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.100-.2.200-.6.800-.800 1-.1.200-.300.200-.5.100-.200-.1-1-.400-2-1.200-.7-.700-1.200-1.500-1.400-1.700-.1-.300 0-.400.1-.500l.4-.400c.1-.2.200-.300.200-.500.1-.200 0-.300 0-.500l-.8-1.800c-.2-.500-.4-.400-.600-.400h-.5c-.2 0-.4.100-.7.300-.2.300-.9.900-.9 2.200s.9 2.500 1.100 2.700c.1.200 1.800 2.800 4.400 3.900.6.300 1.100.400 1.500.500.6.200 1.200.200 1.600.100.500-.1 1.500-.600 1.700-1.200.2-.600.2-1.100.2-1.200-.1-.100-.3-.200-.5-.300z"/></svg>
+        <span data-i="f_send">Send on WhatsApp</span>
+      </button>
+      <p class="fine" data-i="f_fine">No obligation. Your name is only used for this WhatsApp message.</p>
+    </form>
+  </div>
+</section>
+
+<!-- 10 · OBJECTIONS -->
+<section class="light faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rise"><h2 data-i="faq_h2">Before you ask</h2></div>
+    <div class="rise">
+      <details><summary data-i="q1">Where exactly is CRE8?</summary><p data-i="r1">Inside Novva Industrial Park, Sungai Buaya, Serendah. Today you reach it from the Sungai Buaya Interchange on the North–South Expressway (E1) via Jalan Sungai Buaya.</p></details>
+      <details><summary data-i="q2">How big are the factories?</summary><p data-i="r2">Land from 0.99 to 1.25 acres (43,056 to 54,335 sq ft) and built-up from 22,833 to 25,865 sq ft, across three types. Type A plots measure 50 m × 80 m.</p></details>
+      <details><summary data-i="q3">What is the price?</summary><p data-i="r3">SPA prices run from RM 9,985,000 to RM 11,248,000, which works out to about RM 425 to RM 437 per sq ft of built-up area. Ask us for the lot-by-lot chart.</p></details>
+      <details><summary data-i="q4">When will the Bukit Beruntung connection be ready?</summary><p data-i="r4">It is a planned future connection through Novva Industrial Park with a target of Q1 2028. It is subject to infrastructure implementation and authority / developer progress.</p></details>
+      <details><summary data-i="q5">Who is the developer?</summary><p data-i="r5">CRE8 Development Sdn Bhd, a subsidiary of Legacy Maker Berhad.</p></details>
+    </div>
+    <div class="cta-row rise" style="margin-top:36px"><a class="btn btn-primary" href="#book" data-i="faq_cta">Book a viewing</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>CRE8</strong> · <span data-i="ft_1">21 Detached Factories · Sungai Buaya, Serendah · Developer: CRE8 Development Sdn Bhd, a subsidiary of Legacy Maker Berhad.</span></p>
+    <p data-i="ft_2">All images are artist's impressions. Maps and plans are schematic and not to scale. Information, prices and specifications are taken from the developer's sales kit and are subject to change without notice. Planned infrastructure is subject to implementation and authority approval. This page is for general information and is not an offer or contract.</p>
+    <p id="agent-line" hidden></p>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Enlarged image"><button type="button" class="lb-close" id="lb-close" data-i="lb_close">Close</button><div class="lb-scroll"><img id="lb-img" alt=""></div></dialog>
+
+<div class="dock" id="dock"><a class="btn btn-primary" href="#book" data-i="dock">Book a viewing</a></div>
+
+<script>
+/* ============================================================
+   EDIT HERE — everything you are likely to change is in CONFIG
+   ============================================================ */
+const CONFIG = {
+  whatsapp: "60127849468",   // your WhatsApp number, country code first, digits only (e.g. 60123456789)
+  agentLine: "Marketed by Mason Sia · REN 00792 · ONE MAKER REALTY SDN BHD",              // optional footer line, e.g. "Marketed by Mason Sia · REN 12345 · ABC Realty (E(1)1234)"
+  sold: []                    // lot numbers that are taken, e.g. ["55", "83A"]. They get struck off the page.
+};
+
+// Filled in by build.py so the published page is one self-contained file.
+const IMG = {};
+const img = n => IMG[n] || "images/" + n + ".jpg";
+
+const LOTS = {
+  A: [["55"], ["56"], ["60"], ["171"]],
+  B: [["8", "PE"], ["9", "PE"], ["26", "PE"], ["27", "PE"], ["3A"], ["11"], ["17"], ["32"]],
+  C: [["96", "PE"], ["83A"], ["87"], ["88"], ["91"], ["53A"], ["62"], ["121"], ["176"]]
+};
+const TYPES = {
+  A: { land: "43,056 sq ft · 0.99 acre", bu: "22,833 sq ft", psf: "RM 437", price: "RM 9,985,000", range: false,
+       en: { title: "Type A: production space with integrated offices", note: "All four Type A lots", kind: "intermediate",
+             incl: ["Production area at ground level", "Ground- and first-floor offices", "Canteen, washrooms and surau", "Loading access at the front", "50 m × 80 m plot"] },
+       zh: { title: "A 型：生产空间加一体化办公室", note: "四个 A 型地段同价", kind: "中间地段",
+             incl: ["底层为生产区", "底层与一楼办公室", "食堂、洗手间与祈祷室", "正面装卸通道", "50 米 × 80 米地段"] } },
+  B: { land: "52,330–53,830 sq ft · 1.20–1.24 acres", bu: "25,865 sq ft", psf: "RM 425–429", price: "RM 10,985,000", range: true,
+       en: { title: "Type B: more room for daily operations", note: "Up to RM 11,100,000 depending on lot", kind: "intermediate",
+             incl: ["Production area at ground level", "Ground- and first-floor offices", "Canteen, washrooms and surau", "Front loading access and side ramps"] },
+       zh: { title: "B 型：日常运作更宽敞", note: "视地段而定，最高 RM 11,100,000", kind: "中间地段",
+             incl: ["底层为生产区", "底层与一楼办公室", "食堂、洗手间与祈祷室", "正面装卸通道与侧边斜坡"] } },
+  C: { land: "51,861–54,335 sq ft · 1.19–1.25 acres", bu: "25,844 sq ft", psf: "RM 426–435", price: "RM 11,000,000", range: true,
+       en: { title: "Type C: corner position, practical production", note: "Up to RM 11,248,000 depending on lot", kind: "corner",
+             incl: ["Production area at ground level", "Ground- and first-floor offices", "Canteen, washrooms and surau", "Front loading access and ramp", "Corner plot"] },
+       zh: { title: "C 型：角落地段，实用生产空间", note: "视地段而定，最高 RM 11,248,000", kind: "角落地段",
+             incl: ["底层为生产区", "底层与一楼办公室", "食堂、洗手间与祈祷室", "正面装卸通道与斜坡", "角落地段"] } }
+};
+
+/* ---------- Chinese copy ---------- */
+const ZH = {
+  nav_cta: "预约看地", dock: "预约看地", faq_cta: "预约看地",
+  hero_eyebrow: "写给巴生谷北部走廊的工厂老板",
+  hero_h1: "生意越做越大，<em>工厂却还是那么小。</em>",
+  hero_lede: "空间不够用的每一年，都在让你流失订单、效率，还有一去不回的租金。花 60 秒，算一算你到底损失了多少。",
+  hero_cta: "开始 60 秒自我检测", hero_skip: "直接看工厂",
+  hero_n1: "6 道简单问题", hero_n2: "无需注册", hero_n3: "答案只留在你的手机",
+  impression: "艺术构想图",
+  s1_step: "第 1 步，共 6 步 · 检测", s1_h2: "以下哪些情况，<em>正在你的工厂发生？</em>",
+  s1_lede: "符合的都点一下。老实回答，没有别人看得到。",
+  c1_t: "罗里没有地方转弯", c1_d: "拖格罗里排到马路上，或是盲目倒车进厂，装卸一慢，生产就跟着停。",
+  c2_t: "屋顶太矮", c2_d: "货架、吊机、新生产线，全都被天花板卡住。",
+  c3_t: "地板决定机器摆哪里", c3_d: "重型机器只能放在地板承受得了的地方，而不是流程最顺的地方。",
+  c4_t: "跟隔壁共用一面墙", c4_d: "邻居的噪音、火患风险和乱停的罗里，全变成你的问题。",
+  c5_t: "办公室、货仓、生产区抢空间", c5_d: "客户要穿过生产区才能走到你的会议室。",
+  c6_t: "还在租厂", c6_d: "每次续约租金都起，付出去的却没有一分变成你的资产。",
+  s1_next: "下一步：这让你损失多少",
+  s2_step: "第 2 步，共 6 步 · 代价", s2_h2: "你已经付了<em>多少租金？</em>",
+  s2_lede: "把滑杆调到你自己的数字。如果你已经有自己的工厂，就填你扩充所需的更大空间的租金。",
+  calc_rent: "每月租金", calc_years: "已经租了几年",
+  calc_note: "只是把你输入的数字相乘，没有计算租金上涨，所以实际数字通常更高。",
+  led_paid: "至今付给房东", led_owned: "换来属于你的资产", led_next: "照同样租金，未来 10 年",
+  bridge: "想象一下，这笔钱如果是付在<em>一间写着你名字的工厂上。</em>",
+  s3_step: "第 3 步，共 6 步 · 出路", tagline: "生产有空间，成长有余地。",
+  s3_h2: "双溪布亚（Sungai Buaya）士任达 21 间独立式工厂。",
+  s3_lede: "每一间都坐落在约一英亩的独立地段上，生产、仓储和企业办公室集于一厂。为生产而建，为成长而设计。",
+  st1: "独立式工厂", st2: "每间土地面积", st3: "建筑面积", u_acres: "英亩",
+  s4_step: "第 4 步，共 6 步 · 对症", s4_h2: "你刚才勾的每个问题，<em>这里都有答案。</em>",
+  a1_w: "屋顶太矮", a1_t: "12 米楼高", a1_d: "高挑的生产空间，满足你的营运需求。货叠得更高、吊得更高，装得下你真正想要的生产线。",
+  a2_w: "地板决定机器摆哪里", a2_t: "3 吨地板承重", a2_d: "为工业运作而设计的生产地板，机器摆哪里，由你的流程决定。",
+  a3_w: "罗里没有地方转弯", a3_t: "自家地段内的宽阔退缩空间", a3_d: "车辆转弯和装卸都有足够空间，正面装卸通道就在你自己的篱笆内。",
+  a4_w: "跟隔壁共用一面墙", a4_t: "完全独立式", a4_d: "没有共用墙。自己的建筑、自己的围篱、自己的大门，占地 0.99 至 1.25 英亩。",
+  a5_w: "办公室、货仓、生产区抢空间", a5_t: "两层办公室，与生产区分开", a5_d: "企业门面后方设有底层和一楼办公室，另有食堂、洗手间和祈祷室。",
+  a6_w: "还在租厂", a6_t: "属于你的，RM 9,985,000 起", a6_d: "别再替别人供资产。每一期供款，都在累积你自己工业地址的资产。",
+  dwg_t: "剖面图 · 净高", dwg_s: "按比例绘制", dwg_c: "相当于三辆罗里叠起来的高度。罗里和人物为一般尺寸，仅供比例参考。",
+  s5_step: "第 5 步，共 6 步 · 地点", s5_h2: "今天就通达，<em>明天更四通八达。</em>",
+  s5_lede: "CRE8 位于 Novva 工业园内，紧邻南北大道。周边规划中还有第二条大道连接路和东铁（ECRL）车站。",
+  l1_t: "个大道交通枢纽", l1_d: "目前经双溪布亚交通枢纽出入。规划中的连接路将穿过 Novva 工业园通往武吉柏伦东交通枢纽，目标 2028 年第一季。",
+  l2_t: "到东铁 Bandar Serendah 站", l2_d: "未来的客运与货运车站，服务整个士任达工业与物流走廊。",
+  l3_t: "个工业城镇环绕", l3_d: "士任达、武吉柏伦东、双溪祖和万挠，制造商、供应商、劳动力和配套生意一应俱全。",
+  map1_c: "示意图，非按比例绘制。点击放大。",
+  map2_c: "根据总体规划绘制的未来武吉柏伦东路线示意图，须视基础设施落实及当局／发展商进度而定。",
+  s6_step: "第 6 步，共 6 步 · 你的工厂", s6_h2: "三种格局，<em>选最适合你营运的那一种。</em>",
+  tA_s: "中间地段 · 0.99 英亩", tB_s: "中间地段 · 1.20–1.24 英亩", tC_s: "角落地段 · 1.19–1.25 英亩",
+  sp_land: "土地面积", sp_bu: "总建筑面积", sp_lots: "推出地段", sp_psf: "买卖合约价每平方尺（建筑面积）", sp_price: "买卖合约价（SPA）",
+  pl_hint: "点击平面图可放大", lb_close: "关闭",
+  pl_gf: "底层", pl_1f: "一楼", pl_note: "平面图已缩小。点击放大。详细格局以相关地段图为准。",
+  s7_h2: "就只有这么多。<em>地段被订走，就没有了。</em>",
+  site_c: "有颜色的是 CRE8 地段，其余地段仅供位置参考。图表仅供识别，非按比例绘制。PE 地段以图上标示为准。",
+  s7_cta: "问问还有哪些地段",
+  s8_step: "最后一步", s8_h2: "先亲自站在这块地上，<em>再做任何决定。</em>",
+  s8_lede: "图纸没办法告诉你路有多宽、你的罗里怎么转进来。亲自走一趟就知道了。不收费，也不需要任何承诺。",
+  n1_t: "发出预约", n1_d: "会自动打开 WhatsApp 并填好你的资料，我们回复确认时间。",
+  n2_t: "跟我们一起走一趟", n2_d: "到双溪布亚 Novva 工业园实地看地段、出入道路和通往大道的路线。",
+  n3_t: "拿到每个地段的价目表", n3_d: "每个地段的土地面积、建筑面积和买卖合约价，加上你想要的类型的平面图。",
+  f_title: "预约看地", f_name: "你的名字", f_type: "我有兴趣的类型", f_unsure: "还不确定，请给我建议",
+  f_when: "方便看地的时间", f_wd: "平日", f_we: "周末", f_any: "哪天都可以，越快越好",
+  f_send: "用 WhatsApp 发送", f_fine: "没有任何义务。你的名字只会用在这则 WhatsApp 信息里。",
+  faq_h2: "你可能想问",
+  q1: "CRE8 确实位置在哪里？", r1: "位于士任达双溪布亚的 Novva 工业园内。目前从南北大道（E1）双溪布亚交通枢纽，经 Jalan Sungai Buaya 抵达。",
+  q2: "工厂有多大？", r2: "土地面积 0.99 至 1.25 英亩（43,056 至 54,335 平方尺），建筑面积 22,833 至 25,865 平方尺，共三种类型。A 型地段为 50 米 × 80 米。",
+  q3: "价钱多少？", r3: "买卖合约价介于 RM 9,985,000 至 RM 11,248,000，以建筑面积计算约每平方尺 RM 425 至 RM 437。欢迎向我们索取每个地段的价目表。",
+  q4: "武吉柏伦东连接路什么时候通车？", r4: "这是规划中穿过 Novva 工业园的未来连接路，目标为 2028 年第一季，须视基础设施落实及当局／发展商进度而定。",
+  q5: "发展商是谁？", r5: "CRE8 Development Sdn Bhd，Legacy Maker Berhad 的子公司。",
+  ft_1: "21 间独立式工厂 · 双溪布亚，士任达 · 发展商：CRE8 Development Sdn Bhd（Legacy Maker Berhad 子公司）。",
+  ft_2: "所有图片均为艺术构想图。地图与平面图为示意图，非按比例绘制。资料、价格与规格取自发展商销售资料，如有更改恕不另行通知。规划中的基础设施须视落实情况及当局批准而定。本页面仅供一般参考，不构成任何要约或合约。"
+};
+
+/* ---------- Language ---------- */
+let lang = "en";
+const EN = {};
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const t = (en, zh) => (lang === "zh" ? zh : en);
+const rm = n => "RM " + Math.round(n).toLocaleString("en-MY");
+
+function setLang(next) {
+  lang = next;
+  document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+  $$("[data-i]").forEach(el => {
+    const k = el.dataset.i;
+    if (!(k in EN)) EN[k] = el.innerHTML;
+    el.innerHTML = lang === "zh" && ZH[k] ? ZH[k] : EN[k];
+  });
+  $("#lang").textContent = lang === "zh" ? "EN" : "中文";
+  $("#dwg-lorry").textContent = t("lorry ≈ 4 m", "罗里 ≈ 4 米");
+  renderVerdict(); renderCalc(); renderType(); renderLots(); renderRecap();
+  try { localStorage.setItem("cre8-lang", lang); } catch (e) {}
+}
+
+/* ---------- Step 1: checklist ---------- */
+const ISSUE = {
+  turn: ["no room for lorries to turn", "罗里没有地方转弯"], height: ["roof too low", "屋顶太矮"],
+  floor: ["floor loading limits the layout", "地板承重限制摆位"], wall: ["shared wall with neighbour", "跟隔壁共用墙"],
+  squeeze: ["office / store / production squeezed", "办公室、货仓、生产区太挤"], rent: ["still renting", "还在租厂"]
+};
+const ticked = () => $$("#checks input:checked").map(i => i.value);
+
+function renderVerdict() {
+  const n = ticked().length;
+  $("#v-n").textContent = n;
+  $("#v-text").textContent =
+    n === 0 ? t("Tap whatever applies to see where you stand.", "点一下符合的情况，看看你目前的处境。") :
+    n <= 2 ? t("Manageable today. But none of these fix themselves, and each one gets more expensive as you grow.", "目前还应付得来。但这些问题不会自己消失，生意越大，代价越高。") :
+    n <= 4 ? t(`${n} out of 6. Your factory is no longer helping your business. It is holding it back.`, `6 项中了 ${n} 项。你的工厂已经不是在帮你做生意，而是在拖住你。`) :
+             t(`${n} out of 6. You have clearly outgrown this building. Every month you stay is costing you.`, `6 项中了 ${n} 项。这间厂明显已经装不下你的生意，多待一个月就多亏一个月。`);
+  const set = new Set(ticked());
+  $$("#answers .answer").forEach(a => {
+    const hit = set.has(a.dataset.k);
+    a.classList.toggle("hit", hit);
+    let tag = $(".tick-tag", a);
+    if (hit && !tag) { tag = document.createElement("span"); tag.className = "tick-tag"; $("h3", a).appendChild(tag); }
+    if (tag) { tag.hidden = !hit; tag.textContent = t("You ticked this", "你勾了这项"); }
+  });
+  renderRecap();
+}
+
+/* ---------- Step 2: rent calculator ---------- */
+function renderCalc() {
+  const rent = +$("#rent").value, years = +$("#years").value;
+  $("#rent-out").textContent = rm(rent);
+  $("#years-out").textContent = t(years + (years === 1 ? " year" : " years"), years + " 年");
+  $("#paid").textContent = rm(rent * 12 * years);
+  $("#next10").textContent = rm(rent * 120);
+}
+
+/* ---------- Step 6: types ---------- */
+let type = "A";
+const openLots = k => LOTS[k].filter(l => !CONFIG.sold.includes(l[0]));
+
+function renderType() {
+  const d = TYPES[type], c = d[lang];
+  $("#t-title").textContent = c.title;
+  $("#t-land").textContent = lang === "zh" ? d.land.replace("acres", "英亩").replace("acre", "英亩").replace("sq ft", "平方尺") : d.land;
+  $("#t-bu").textContent = lang === "zh" ? d.bu.replace("sq ft", "平方尺") : d.bu;
+  $("#t-lots").textContent = t(`${LOTS[type].length} ${c.kind} lots`, `${LOTS[type].length} 个${c.kind}`);
+  $("#t-psf").textContent = d.psf;
+  $("#t-price").textContent = (d.range ? t("From ", "") : "") + d.price + (d.range && lang === "zh" ? " 起" : "");
+  $("#t-price-note").textContent = c.note;
+  $("#t-incl").innerHTML = c.incl.map(x => `<li>${x}</li>`).join("");
+  $("#t-cta").textContent = t(`View a Type ${type} lot`, `预约看 ${type} 型地段`);
+  $("#p-gf").src = img(`plan${type}-gf`);
+  $("#p-1f").src = img(`plan${type}-1f`);
+  $("#plans-title").textContent = t(`Type ${type} floor plans`, `${type} 型平面图`);
+  $("#p-gf").alt = `Type ${type} ground floor plan`; $("#p-1f").alt = `Type ${type} first floor plan`;
+  $$(".tab").forEach(b => b.setAttribute("aria-selected", b.dataset.type === type));
+  $("#type-panel").setAttribute("aria-labelledby", "tab-" + type);
+}
+
+/* ---------- Scarcity: lots ---------- */
+function renderLots() {
+  const names = { A: t("Type A · intermediate", "A 型 · 中间地段"), B: t("Type B · intermediate", "B 型 · 中间地段"), C: t("Type C · corner", "C 型 · 角落地段") };
+  let left = 0;
+  $("#lot-groups").innerHTML = Object.keys(LOTS).map(k => {
+    const open = openLots(k).length; left += open;
+    const chips = LOTS[k].map(([no, pe]) => {
+      const sold = CONFIG.sold.includes(no);
+      const sub = sold ? t("TAKEN", "已售") : (pe || "&nbsp;");
+      return `<span class="lot${sold ? " sold" : ""}">${no}<i>${sub}</i></span>`;
+    }).join("");
+    return `<div class="lot-group"><h3>${names[k]}<span>${t(open + " open", "尚余 " + open + " 个")}</span></h3><div class="lots">${chips}</div></div>`;
+  }).join("");
+  $("#left-count").textContent = left;
+  $("#lots-lede").textContent = left === 21
+    ? t("21 lots in total. Only 4 are Type A and only 9 are corners. The lot you want is one of one.", "总共只有 21 个地段，A 型只有 4 个，角落地段只有 9 个。你看中的那一个，全世界只有一个。")
+    : t(`${21 - left} of 21 are already taken. ${left} remain. The lot you want is one of one.`, `21 个地段已经售出 ${21 - left} 个，只剩 ${left} 个。你看中的那一个，全世界只有一个。`);
+}
+
+/* ---------- Booking ---------- */
+function renderRecap() {
+  const ids = ticked(), el = $("#recap");
+  el.hidden = ids.length === 0;
+  if (ids.length) el.textContent = t("We will also pass on what you ticked: ", "我们也会附上你勾选的问题：") + ids.map(i => ISSUE[i][lang === "zh" ? 1 : 0]).join(lang === "zh" ? "、" : ", ");
+}
+
+$("#form").addEventListener("submit", e => {
+  e.preventDefault();
+  const name = $("#f-name").value.trim(), err = $("#f-err");
+  if (!name) { err.hidden = false; err.textContent = t("Please enter your name so we know who to reply to.", "请填上你的名字，方便我们回复你。"); $("#f-name").focus(); return; }
+  err.hidden = true;
+  const ty = $("#f-type").value, when = $("#f-when").selectedOptions[0].textContent, ids = ticked();
+  const lines = lang === "zh"
+    ? [`你好，我想预约看 CRE8 独立式工厂（双溪布亚）。`, `名字：${name}`, `有兴趣：${ty === "?" ? "还不确定，请给建议" : ty + " 型"}`, `方便时间：${when}`]
+    : [`Hi, I would like to book a viewing for CRE8 detached factories (Sungai Buaya).`, `Name: ${name}`, `Interested in: ${ty === "?" ? "Not sure yet, please advise" : "Type " + ty}`, `Best time: ${when}`];
+  if (ids.length) lines.push(t("My current factory: ", "我目前工厂的问题：") + ids.map(i => ISSUE[i][lang === "zh" ? 1 : 0]).join(lang === "zh" ? "、" : ", "));
+  window.open("https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+});
+
+/* ---------- Wiring ---------- */
+document.documentElement.classList.add("js");
+document.documentElement.style.setProperty("--hero-img", `url("${img("hero")}")`);
+$$("img[data-img]").forEach(el => { el.src = img(el.dataset.img); });
+
+const lb = $("#lb"), lbImg = $("#lb-img");
+$$(".zoom").forEach(b => b.addEventListener("click", () => {
+  const im = $("img", b); lbImg.src = im.src; lbImg.alt = im.alt; lbImg.classList.remove("big");
+  lb.showModal ? lb.showModal() : lb.setAttribute("open", "");
+}));
+lbImg.addEventListener("click", () => lbImg.classList.toggle("big"));
+$("#lb-close").addEventListener("click", () => lb.close ? lb.close() : lb.removeAttribute("open"));
+$("#lang").addEventListener("click", () => setLang(lang === "zh" ? "en" : "zh"));
+$("#checks").addEventListener("change", renderVerdict);
+$("#rent").addEventListener("input", renderCalc);
+$("#years").addEventListener("input", renderCalc);
+$$(".tab").forEach(b => b.addEventListener("click", () => { type = b.dataset.type; $("#f-type").value = type; renderType(); }));
+if (CONFIG.agentLine) { $("#agent-line").hidden = false; $("#agent-line").textContent = CONFIG.agentLine; }
+
+let saved = null;
+try { saved = localStorage.getItem("cre8-lang"); } catch (e) {}
+setLang(saved || ((navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en"));
+
+const io = "IntersectionObserver" in window
+  ? new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { rootMargin: "0px 0px -8% 0px" })
+  : null;
+$$(".rise").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+setTimeout(() => $$(".rise").forEach(el => el.classList.add("in")), 3000); // never leave content hidden
+
+const bar = $("#progress"), dock = $("#dock"), book = $("#book");
+function onScroll() {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  bar.style.transform = `scaleX(${max > 0 ? Math.min(1, scrollY / max) : 0})`;
+  const r = book.getBoundingClientRect();
+  dock.classList.toggle("on", scrollY > innerHeight * 0.7 && !(r.top < innerHeight && r.bottom > 0));
+}
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+</script>
+</body>
+</html>
